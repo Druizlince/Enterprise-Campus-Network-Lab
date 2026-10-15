@@ -42,3 +42,9 @@ A fully configured enterprise campus network built on two physical Cisco Catalys
 
 
 
+<img width="931" height="644" alt="image" src="https://github.com/user-attachments/assets/12c3ce27-8476-4af8-a6f5-7b20a12321a0" />
+
+
+
+
+

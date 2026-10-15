@@ -2,9 +2,14 @@
 
 A fully configured enterprise campus network built on two physical Cisco Catalyst 3850 switches, designed to simulate a real-world production environment.
 
+<p align="center">
+  <img width="931" alt="Enterprise Campus Network Lab topology: SWLAY3 Layer 3 core and SWLAY2 Layer 2 access switch joined by an LACP EtherChannel trunk" src="https://github.com/user-attachments/assets/12c3ce27-8476-4af8-a6f5-7b20a12321a0" />
+</p>
+<p align="center"><em>Lab topology: SWLAY3 (Layer 3 core) and SWLAY2 (Layer 2 access), connected by a two-link LACP EtherChannel trunk.</em></p>
+
 ## Network Overview
-- **SWLAY2** — Layer 2 switch handling all access port assignments and VLAN segmentation
 - **SWLAY3** — Layer 3 switch handling Inter-VLAN routing, DHCP, and ACL enforcement
+- **SWLAY2** — Layer 2 switch handling all access port assignments and VLAN segmentation
 - **Po1** — LACP EtherChannel uplink between both switches providing redundancy and 2Gbps aggregated bandwidth
 
 ## VLANs Configured
@@ -33,18 +38,13 @@ A fully configured enterprise campus network built on two physical Cisco Catalys
 - **AV** — internet access only, blocked from Admin, ITS, and servers
 - **Printer** — cannot initiate any traffic
 
-## Files
-[Layer_2_switch_configuration.txt](https://github.com/user-attachments/files/26952601/Layer_2_switch_configuration.txt)
-[Layer_3_switch_configuration.txt](https://github.com/user-attachments/files/26952629/Layer_3_switch_configuration.txt)
+## Configuration Files
+Each file contains the full `show running-config` plus verification output (VLANs, trunks, EtherChannel, PoE, routing, DHCP snooping, DAI, and ACLs).
+
+| Switch | Role | File |
+|--------|------|------|
+| SWLAY3 | Layer 3 core | [configs/Layer_3_switch_configuration.txt](configs/Layer_3_switch_configuration.txt) |
+| SWLAY2 | Layer 2 access | [configs/Layer_2_switch_configuration.txt](configs/Layer_2_switch_configuration.txt) |
+
 ---
 *Built as part of a personal home lab to reinforce enterprise networking concepts and prepare for CCNA certification.*
-
-
-
-
-<img width="931" height="644" alt="image" src="https://github.com/user-attachments/assets/12c3ce27-8476-4af8-a6f5-7b20a12321a0" />
-
-
-
-
-
